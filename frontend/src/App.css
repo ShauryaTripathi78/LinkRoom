@@ -1,0 +1,358 @@
+/* NAVBAR */
+/* --------------- LANDING PAGE --------------- */
+
+.landingPageContainer {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 20px 40px;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navHeader h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navlist {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navlist p, 
+.navlist div p {
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.navlist p:hover {
+    color: #FF9839;
+}
+
+/* Main Landing Container */
+.landingMainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    gap: 40px;
+}
+
+/* Left Text */
+.landingMainContainer h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    max-width: 500px;
+}
+
+.landingMainContainer p {
+    margin-top: 15px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* CTA Button */
+.landingMainContainer div[role="button"] {
+    margin-top: 20px;
+    background: #FF9839;
+    padding: 12px 25px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.landingMainContainer div[role="button"] a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Right-side Image */
+.landingMainContainer img {
+    width: 400px;
+    max-width: 100%;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+@media (max-width: 900px) {
+    .landingMainContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .landingMainContainer h1 {
+        font-size: 36px;
+    }
+
+    .landingMainContainer div[role="button"] {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .navlist {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .landingMainContainer h1 {
+        font-size: 30px;
+    }
+
+    .landingMainContainer img {
+        width: 300px;
+    }
+}
+/* -------- MAIN VIDEO MEET CONTAINER -------- */
+.meetVideoContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: #111;
+    overflow: hidden;
+}
+
+/* -------- CHAT PANEL -------- */
+.chatRoom {
+    width: 320px;
+    background: #1e1e1e;
+    border-right: 1px solid #333;
+    display: flex;
+    padding: 15px;
+    color: white;
+}
+
+.chatContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chattingDisplay {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.chattingArea {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* -------- CONTROL BUTTON BAR -------- */
+.buttonContainers {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    background: rgba(0,0,0,0.4);
+    padding: 12px 20px;
+    border-radius: 20px;
+    z-index: 9999;
+}
+
+/* -------- LOCAL USER VIDEO -------- */
+.meetUserVideo {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    width: 220px;
+    height: 140px;
+    background: black;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* -------- CONFERENCE VIDEO GRID -------- */
+.conferenceView {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.conferenceView video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: #000;
+    object-fit: cover;
+}
+
+
+/* ---------------- RESPONSIVE FIXES ---------------- */
+
+
+/* ------ (1) Chat Hidden on Mobile, Opens Fullscreen ------ */
+@media (max-width: 900px) {
+    .chatRoom {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        border: none;
+    }
+
+    .buttonContainers {
+        bottom: 10px;
+        padding: 10px 15px;
+        gap: 12px;
+    }
+
+    .meetUserVideo {
+        width: 150px;
+        height: 100px;
+        right: 10px;
+        bottom: 90px;
+    }
+}
+
+
+/* ------ (2) Very small phones (below 600px) ------ */
+@media (max-width: 600px) {
+    .conferenceView {
+        padding: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .buttonContainers {
+        gap: 10px;
+        padding: 8px 10px;
+    }
+
+    .meetUserVideo {
+        width: 130px;
+        height: 90px;
+    }
+}
+
+.navBar {
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    background: white;
+}
+
+.navLeft h2 {
+    font-size: 24px;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navRight p {
+    margin: 0;
+}
+
+/* MAIN CONTAINER */
+.meetContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    min-height: 80vh;
+}
+
+/* LEFT PANEL */
+.leftPanel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.leftPanel h2 {
+    font-size: 32px;
+    max-width: 500px;
+}
+
+/* RIGHT PANEL */
+.rightPanel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightPanel img {
+    width: 80%;
+    max-width: 400px;
+}
+
+/* INPUT ROW */
+.inputRow {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.joinButton {
+    height: 55px;
+}
+
+/* ---------------------- */
+/* RESPONSIVE BREAKPOINTS */
+/* ---------------------- */
+
+@media (max-width: 900px) {
+    .meetContainer {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .leftPanel h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .rightPanel img {
+        width: 60%;
+    }
+
+    .inputRow {
+        flex-direction: column;
+    }
+
+    .joinButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navBar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .leftPanel h2 {
+        font-size: 22px;
+    }
+
+    .rightPanel img {
+        width: 80%;
+    }
+}
